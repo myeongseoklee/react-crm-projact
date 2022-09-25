@@ -1,6 +1,4 @@
 import React from "react";
-// import TableRow from '@mui/material/TableRow'
-// import TableCell from '@mui/material/TableCell'
 import {Table, TableBody, TableCell, TableHead, TableRow} from '@mui/material/';
 
 class Customer extends React.Component {
