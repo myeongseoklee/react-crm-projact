@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Customer from './components/Customer';
 import './App.css';
 import {Paper, Table, TableBody, TableCell, TableHead, TableRow} from '@mui/material/';
+import CircularProgress from '@mui/joy/CircularProgress';
+import { ClassNames } from '@emotion/react';
+
 // import { styled } from '@mui/material/styles'
 
 // const styles = theme => ({
@@ -51,11 +54,16 @@ class App extends Component {
                 <TableCell>직업</TableCell>
               </TableRow>
           </TableHead>
-
           <TableBody>
           {this.state.customers ? this.state.customers.map(c => {
             return (<Customer key={c.id} id={c.id} image={c.image} name={c.name} birthday={c.birthday} gender={c.gender} job={c.job}/>)})
-            : ""}
+            :
+            <TableRow>
+              <TableCell colSpan="6" align='center'>
+              <CircularProgress />
+              </TableCell>
+            </TableRow>
+          }
           </TableBody>
         </Table>
       </Paper>

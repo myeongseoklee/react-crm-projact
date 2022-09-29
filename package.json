@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "scripts": {
     "client": "cd client && npm start",
-    "server": "nodemon server.js",
-    "dev": "concurrently --kill-others-on-fail \"npm server\" \"npm client\""
+    "server": "cd management && npm start",
+    "dualstart": "concurrently --kill-others-on-fail \"npm server\" \"npm client\""
   },
   "dependencies": {
     "body-parser": "^1.20.0",
